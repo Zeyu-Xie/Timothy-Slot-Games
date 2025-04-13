@@ -1,4 +1,15 @@
-import { slotitems } from "./make_items.js"
+/*
+Author: Zeyu Xie
+Time: 2025-04-13 11:28 CET
+*/
+
+import { slotitems, slotitem_name } from "./make_items.js"
+
+/*
+================================
+= Functions and Variables Part =
+================================
+*/
 
 // Reels DOM
 const reels = [$("#reel-1")[0], $("#reel-2")[0], $("#reel-3")[0]];
@@ -33,19 +44,25 @@ const _spin = (spin_idx1, spin_idx2, spin_idx3) => {
     setTimeout(() => {
         idxs = idxs.map((idx, i) => (idx + spin_idxs[i]) % 15);
         init_reel(...idxs);
-        console.log(`Spinning Time ${tot} Result: ${idxs[0]} | ${idxs[1]} | ${idxs[2]}`);
+        console.log(`Spinning Time ${tot} Result: [ ${idxs[0]} (${slotitem_name(idxs[0])}) | ${idxs[1]} (${slotitem_name(idxs[1])}) | ${idxs[2]} (${slotitem_name(idxs[2])}) ]`);
     }, animation_period + 10);
 }
 const random_spin = () => {
-    let spin_idxs = three_randoms();
-    _spin(...spin_idxs);
+    _spin(...three_randoms());
 }
 
+/*
+================================
+=       Main Script Part       =
+================================
+*/
+
+// Console logs
 console.log("Welcome to Timothy Slot Games! ")
 console.log("Author: Zeyu Xie")
 
 init_reel(...three_randoms());
-console.log(`Starting Status: ${idxs[0]} | ${idxs[1]} | ${idxs[2]}`);
+console.log(`Starting Status: [ ${idxs[0]} (${slotitem_name(idxs[0])}) | ${idxs[1]} (${slotitem_name(idxs[1])}) | ${idxs[2]} (${slotitem_name(idxs[2])}) ]`);
 
 // Button
 let in_animation = false;

@@ -1,3 +1,8 @@
+/*
+Author: Zeyu Xie
+Time: 2025-04-13 11:28 CET
+*/
+
 function createSlotItem(name) {
     return $("<img>", {
         class: `slotitem slotitem-${name}`,
@@ -18,4 +23,7 @@ export const slotitems = (start) => {
         return twice_slotitems.slice(start - 1, start + 14).map(createSlotItem);
     }
     return ["apple", ...twice_slotitems.slice(start, start + 14)].map(createSlotItem);
+}
+export const slotitem_name = (idx) => {
+    return twice_slotitems[idx % 15];
 }
