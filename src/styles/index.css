@@ -1,0 +1,209 @@
+.container {
+  position: relative;
+  padding: 0;
+  border: 0;
+}
+
+@keyframes spin_0 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-0)));
+  }
+}
+@keyframes spin_1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-1)));
+  }
+}
+@keyframes spin_2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-2)));
+  }
+}
+@keyframes spin_3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-3)));
+  }
+}
+@keyframes spin_4 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-4)));
+  }
+}
+@keyframes spin_5 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-5)));
+  }
+}
+@keyframes spin_6 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-6)));
+  }
+}
+@keyframes spin_7 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-7)));
+  }
+}
+@keyframes spin_8 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-8)));
+  }
+}
+@keyframes spin_9 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-9)));
+  }
+}
+@keyframes spin_10 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-10)));
+  }
+}
+@keyframes spin_11 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-11)));
+  }
+}
+@keyframes spin_12 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-12)));
+  }
+}
+@keyframes spin_13 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-13)));
+  }
+}
+@keyframes spin_14 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(calc(99px + 1rem) * (-14)));
+  }
+}
+.reel {
+  width: 117px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(88px - (99px + 1rem) * 1.5);
+  line-height: 0;
+}
+
+.divider {
+  width: 4px;
+  height: 176px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: #fab497;
+  position: absolute;
+  top: 0;
+}
+
+.slotitem {
+  width: 99px;
+  height: 99px;
+  position: relative;
+  margin: 0;
+  border: 0;
+  padding: 0.5rem 9px;
+}
+
+body {
+  min-width: calc(600px + 2rem);
+  width: 100vw;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+#main-container {
+  width: 600px;
+  height: 600px;
+  background-image: url("../images/background.png");
+  background-size: contain;
+  margin: 1rem auto;
+}
+
+#screen {
+  top: 127px;
+  left: 117px;
+  width: 359px;
+  height: 176px;
+  border: 4px #fab497 solid;
+  border-radius: 20px;
+  background-color: #f9dec4;
+  overflow: hidden;
+}
+#screen #divider-1 {
+  left: 117px;
+}
+#screen #divider-2 {
+  left: 238px;
+}
+#screen #reel-1 {
+  left: 0;
+}
+#screen #reel-2 {
+  left: 121px;
+}
+#screen #reel-3 {
+  left: 242px;
+}
+
+#button {
+  width: 218px;
+  height: 68px;
+  border-radius: 13px;
+  position: absolute;
+  left: 199px;
+  top: 474px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */

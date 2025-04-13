@@ -1,0 +1,112 @@
+@use "sass:math";
+
+$game_width: 600px;
+$game_height: 600px;
+$slot_screen_width: 359px;
+$slot_screen_height: 176px;
+$slotitem_width: 99px;
+$slotitem_height: 99px;
+$slotitem_offset_height: calc($slotitem_height + 1rem);
+$reel_width: math.div($slot_screen_width - 8px, 3);
+$reel_top: calc($slot_screen_height * 0.5 - $slotitem_offset_height * 1.5);
+$col_border_1: #fab497;
+$col_content_1: #f9dec4;
+
+.container {
+  position: relative;
+  padding: 0;
+  border: 0;
+}
+
+@for $i from 0 through 14 {
+  @keyframes spin_#{$i} {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(#{$slotitem_offset_height} * (-#{$i})));
+    }
+  }
+}
+
+.reel {
+  width: $reel_width;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: $reel_top;
+  line-height: 0;
+}
+
+.divider {
+  width: 4px;
+  height: $slot_screen_height;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: $col_border_1;
+  position: absolute;
+  top: 0;
+}
+
+.slotitem {
+  width: $slotitem_width;
+  height: $slotitem_height;
+  position: relative;
+  margin: 0;
+  border: 0;
+  padding: 0.5rem calc(($reel_width - $slotitem_width) / 2);
+}
+
+body {
+  min-width: calc($game_width + 2rem);
+  width: 100vw;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+#main-container {
+  width: $game_width;
+  height: $game_height;
+  background-image: url("../images/background.png");
+  background-size: contain;
+  margin: 1rem auto;
+}
+
+#screen {
+  top: 127px;
+  left: 117px;
+  width: $slot_screen_width;
+  height: $slot_screen_height;
+  border: 4px $col_border_1 solid;
+  border-radius: 20px;
+  background-color: $col_content_1;
+  overflow: hidden;
+  #divider-1 {
+    left: $reel_width;
+  }
+  #divider-2 {
+    left: calc($reel_width * 2 + 4px);
+  }
+  #reel-1 {
+    left: 0;
+  }
+  #reel-2 {
+    left: calc($reel_width + 4px);
+  }
+  #reel-3 {
+    left: calc($reel_width * 2 + 8px);
+  }
+}
+
+#button {
+  width: 218px;
+  height: 68px;
+  border-radius: 13px;
+  position: absolute;
+  left: 199px;
+  top: 474px;
+  cursor: pointer;
+}
